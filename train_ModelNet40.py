@@ -62,7 +62,7 @@ class Modelnet40Config(Config):
     dataset_task = ''
 
     # Number of CPU threads for the input pipeline
-    input_threads = 10
+    input_threads = 1
 
     #########################
     # Architecture definition
@@ -249,13 +249,13 @@ if __name__ == '__main__':
                                  sampler=training_sampler,
                                  collate_fn=ModelNet40Collate,
                                  num_workers=config.input_threads,
-                                 pin_memory=True)
+                                 pin_memory=False)
     test_loader = DataLoader(test_dataset,
                              batch_size=1,
                              sampler=test_sampler,
                              collate_fn=ModelNet40Collate,
                              num_workers=config.input_threads,
-                             pin_memory=True)
+                             pin_memory=False)
 
     # Calibrate samplers
     training_sampler.calibration(training_loader)

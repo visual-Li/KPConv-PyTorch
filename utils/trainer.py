@@ -200,8 +200,8 @@ class ModelTrainer:
                 self.optimizer.step()
 
                 
-                torch.cuda.empty_cache()
-                torch.cuda.synchronize(self.device)
+                # torch.cuda.empty_cache()
+                # torch.cuda.synchronize(self.device)
 
                 t += [time.time()]
 
