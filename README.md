@@ -57,3 +57,6 @@ Our code is released under MIT License (see LICENSE file for details).
 ## Updates
 * 27/04/2020: Initial release.
 * 27/04/2020: Added NPM3D support thanks to @GeoSur.
+
+# reald web 
+[KPConv论文解读](https://www.cnblogs.com/wangchangshuo/p/14076358.html)
